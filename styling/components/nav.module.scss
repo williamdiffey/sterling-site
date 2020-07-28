@@ -1,0 +1,100 @@
+// @use "./_variables";
+
+$phoneplus: 'screen and (min-width: 600px)';
+$ipad: 'screen and (min-width: 768px)';
+$desktop: 'screen and (min-width: 1080px)';
+$fourk: 'screen and (mind-width: 3000px)';
+
+.nav {
+  display: flex;
+
+  // parent for links at top of screen
+  .toplinkcontainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  //links at top of screen
+  .toplink {
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 10px;
+    font-weight: 300;
+    @media #{$ipad} {
+      font-size: 35px;
+    }
+  }
+
+  //parent for link area in popout menu
+  .popoutlinkcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-content: space-around;
+    align-content: justify;
+    margin: 5px;
+    margin-right: 5px;
+  }
+
+  // links in popout menu
+  .popoutlink {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    @media #{$ipad} {
+      font-size: 30px;
+    }
+  }
+
+  //burger closed settings
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 2px;
+    margin: 11px;
+    transition: 0.4s;
+    margin-right: 15px;
+    background: #f2eff1;
+  }
+
+  //burger open settings
+  .burgeropen .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+    -webkit-animation: flicker-in-2 5s linear infinite reverse both;
+    animation: flicker-in-2 5s linear infinite reverse both;
+  }
+
+  .burgeropen .bar2 {
+    opacity: 0;
+  }
+
+  .burgeropen .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    -webkit-animation: flicker-in-1 0.5s linear both;
+    animation: flicker-in-1 0.5s linear both;
+  }
+
+  //closed popout menu settings
+  .menuclosed {
+    display: none;
+  }
+
+  //open popout menu area
+  .menuopen {
+    display: inline-block;
+    height: 250px;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: black;
+  }
+
+  .logout {
+    border-radius: 5px;
+  }
+}
