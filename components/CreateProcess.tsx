@@ -2,7 +2,7 @@
 // import PaletteIcon from "@material-ui/icons/Palette";
 // import ImportantDevicesIcon from "@material-ui/icons/ImportantDevices";
 // import LanguageIcon from "@material-ui/icons/Language";
-import styles from "../Styles/createProcess.module.scss";
+import styles from "../Styles/CreateProcess.module.scss";
 import { useState, useCallback, useRef, useEffect } from "react";
 import React from "react";
 import { Fade, Slide } from "react-awesome-reveal";

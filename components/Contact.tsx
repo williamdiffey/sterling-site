@@ -1,4 +1,4 @@
-import styles from "../Styles/contact.module.scss";
+import styles from "../Styles/Contact.module.scss";
 import { Fade, Slide } from "react-awesome-reveal";
 
 export default function ContactForm() {

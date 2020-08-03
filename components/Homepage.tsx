@@ -1,7 +1,7 @@
 import React from "react";
 import { Fade, Slide } from "react-awesome-reveal";
 import { useState, useCallback, useRef, useEffect } from "react";
-import styles from "../Styles/indexTwo.module.scss";
+import styles from "../Styles/IndexTwo.module.scss";
 
 export default function Homepage() {
   const [brightness, setBrightness] = useState(100);

@@ -1,4 +1,4 @@
-import styles from "../Styles/portfolio.module.scss";
+import styles from "../Styles/Portfolio.module.scss";
 import { useState, useCallback, useRef, useEffect } from "react";
 import React from "react";
 import { Fade, Slide } from "react-awesome-reveal";

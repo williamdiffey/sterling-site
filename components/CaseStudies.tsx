@@ -1,4 +1,4 @@
-import styles from "../Styles/caseStudies.module.scss";
+import styles from "../Styles/CaseStudies.module.scss";
 import { useState, useCallback, useRef, useEffect } from "react";
 import React from "react";
 import Link from "../utils/ActiveLink";
