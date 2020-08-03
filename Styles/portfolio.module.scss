@@ -1,0 +1,167 @@
+$button-color: rgba(239, 114, 111, 0.9);
+
+.portfolioContainer {
+  height: 100vh;
+  position: relative;
+
+  .portfolioBackground {
+    height: 100vh;
+    background: rgb(38, 21, 45);
+  }
+
+  .titleContainer {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    h1 {
+      padding: 20px;
+      font-size: 5vw;
+      letter-spacing: 2px;
+      color: white;
+    }
+
+    a {
+      margin-right: 2%;
+      margin-left: 5%;
+    }
+
+    span {
+      color: rgb(206, 24, 206);
+    }
+  }
+
+  h2 {
+    position: absolute;
+    top: 50%;
+    color: white;
+  }
+
+  .cardContainer {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .hoverDiv {
+      padding-top: 40px;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      opacity: 0;
+
+      p {
+        color: white;
+        padding: 5px;
+        font-family: "Roboto", sans-serif;
+        line-height: 30px;
+        font-style: italic;
+      }
+
+      #quote {
+        text-align: right;
+        font-style: normal;
+      }
+    }
+
+    .cardOne {
+      width: 350px;
+      height: 350px;
+      position: relative;
+      background: url("https://sterling-website.s3.us-east-2.amazonaws.com/truck.gif");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center top;
+      border-radius: 10px;
+    }
+
+    .cardTwo {
+      width: 350px;
+      height: 350px;
+      position: relative;
+      background: url("https://sterling-website.s3.us-east-2.amazonaws.com/ui.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center top;
+      border-radius: 10px;
+    }
+
+    .cardBottom {
+      position: absolute;
+      bottom: 0;
+      height: 60px;
+      background: white;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      border-radius: 0 0 10px 10px;
+      font-family: "Roboto", sans-serif;
+
+      h2 {
+        font-size: 1.3rem;
+        color: black;
+        top: 5px;
+        padding-top: 3px;
+      }
+      h3 {
+        position: absolute;
+        top: 15px;
+        font-size: 0.8rem;
+        color: rgb(68, 68, 68);
+        padding-top: 10px;
+      }
+    }
+  }
+
+  .cardOne:hover,
+  .cardTwo:hover {
+    .hoverDiv {
+      display: block;
+      animation: reveal ease-in-out 0.5s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .portfolioContainer {
+    height: 100vh;
+
+    .titleContainer {
+      h1 {
+        font-size: 4.5rem;
+      }
+    }
+    .cardContainer {
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      overflow-x: scroll;
+
+      a {
+        margin-right: 2%;
+        margin-left: 5%;
+      }
+
+      #lastCard {
+        margin-right: 20px;
+      }
+    }
+  }
+}

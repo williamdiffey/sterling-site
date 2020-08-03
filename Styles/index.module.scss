@@ -1,0 +1,214 @@
+$button-color: rgb(239, 114, 111);
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+.pageContainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.leftContainer {
+  width: 30%;
+  padding: 20px;
+}
+
+.colorCircleHome {
+  height: 200px;
+  width: 200px;
+  background: $button-color;
+  opacity: 0.7;
+  border-radius: 50%;
+  position: absolute;
+  top: -10%;
+  left: -10%;
+}
+
+.circleHome {
+  height: 550px;
+  width: 550px;
+  border: 2px dashed $button-color;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  z-index: -100;
+  display: none;
+}
+
+.boxHome {
+  height: 400px;
+  width: 400px;
+  border: 2px dashed rgb(219, 226, 242);
+  transform: rotate(110deg);
+  position: absolute;
+  top: -20%;
+  right: -10%;
+}
+
+.cardInfo h2 {
+  letter-spacing: 4px;
+  padding: 0;
+  margin: 0;
+
+  color: rgb(51, 47, 47);
+}
+
+.leftContainer h3 {
+  color: rgb(53, 53, 53);
+  align-items: flex-start;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 3%;
+}
+
+#contactButton {
+  margin-top: 20px;
+  border: 1px solid $button-color;
+  border-radius: 100px 100px 100px 100px;
+  background: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  font-family: "Yeseva One", cursive;
+}
+
+#contactButton:hover {
+  color: white;
+}
+
+#contactButton::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: $button-color;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+#contactButton::before {
+  top: 0;
+  border-radius: 0% 0 35% 90%;
+}
+
+#contactButton:hover::before {
+  height: 180%;
+}
+
+.rightContainer {
+  width: 70%;
+}
+
+#teamImg {
+  width: 80%;
+  position: absolute;
+  top: 2%;
+  right: 0%;
+}
+
+.cursor {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $button-color;
+  opacity: 0.5;
+  background: $button-color;
+  box-sizing: border-box;
+  transition: 0.3s;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+h2:hover ~ .cursor,
+h1:hover ~ .cursor,
+h3:hover ~ .cursor {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed $button-color;
+  animation: animate 5s linear infinite;
+  background: none;
+  opacity: 1;
+}
+
+button:hover ~ .cursor {
+  border-radius: 0;
+  width: 100px;
+  height: 100px;
+  border: 2px dashed rgb(219, 226, 242);
+  animation: animate 5s linear infinite;
+  background: none;
+  opacity: 1;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@media (max-width: $screen-xl-min) {
+  .cursor {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .leftContainer,
+  .rightContainer {
+    width: 100%;
+  }
+
+  #teamImg {
+    position: relative;
+    width: 70%;
+  }
+
+  .colorCircleHome {
+    height: 150px;
+    width: 150px;
+  }
+
+  .circleHome {
+    height: 300px;
+    width: 300px;
+    border: 2px dashed $button-color;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    z-index: -1;
+  }
+
+  .boxHome {
+    height: 250px;
+    width: 250px;
+    top: -20%;
+    right: -20%;
+    transform: rotate(70deg);
+  }
+
+  #contactButton {
+    background: $button-color;
+    color: white;
+  }
+}

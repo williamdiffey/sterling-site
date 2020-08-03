@@ -1,0 +1,64 @@
+.pageContainer {
+  height: 100%;
+  width: 100%;
+  background: rgb(38, 21, 45);
+  position: relative;
+
+  .sunDiv {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    &::before {
+      background-image: url("https://sterling-website.s3.us-east-2.amazonaws.com/sunAndSky.png");
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+      background-attachment: fixed;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      will-change: transform;
+      z-index: 0;
+    }
+  }
+
+  .writingContainer {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #323232;
+
+    h1 {
+      letter-spacing: 1.5px;
+    }
+  }
+
+  .treesDiv {
+    width: 100vw;
+    height: 100vh;
+    background: url("https://sterling-website.s3.us-east-2.amazonaws.com/treesAndMountains.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+  }
+
+  //   .backgroundDiv {
+  //     width: 100vw;
+  //     height: 20vh;
+  //     background: rgb(38, 21, 45);
+  //     position: absolute;
+  //     bottom: 0;
+  //     z-index: 99;
+  //   }
+}

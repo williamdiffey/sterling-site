@@ -1,19 +1,19 @@
-import * as React from 'react'
-import { NavBar } from './Nav'
+import * as React from "react";
+import { NavBar } from "./Nav";
 
 type Props = {
-  title?: string
-}
+  title?: string;
+};
 
 const Layout: React.FunctionComponent<Props> = ({ children }) => (
   <div>
     <link
       href={`https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap`}
-      rel='stylesheet'
+      rel="stylesheet"
     ></link>
-    <NavBar />
+    {/* <NavBar /> */}
     {children}
   </div>
-)
+);
 
-export default Layout
+export default Layout;

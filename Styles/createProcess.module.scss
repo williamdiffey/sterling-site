@@ -1,0 +1,98 @@
+.createProcessContainer {
+  height: 120vh;
+  position: relative;
+  background: rgb(5, 3, 6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+
+  .titleContainer {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    h1 {
+      padding: 20px;
+      font-size: 5rem;
+      letter-spacing: 2px;
+    }
+
+    span {
+      color: rgb(206, 24, 206);
+    }
+  }
+
+  .cardContainer {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    #cardOne {
+      background: #cf56e3;
+    }
+
+    #cardTwo {
+      background: #d26bfa;
+    }
+
+    #cardThree {
+      background: #a756e3;
+    }
+
+    #cardFour {
+      background: #a460fd;
+    }
+
+    .createCard {
+      width: 20%;
+      height: 100px;
+      padding: 10px;
+      display: flex;
+      border-radius: 10px;
+
+      h2,
+      p {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .leftCard {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .rightCard {
+        width: 70%;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .createProcessContainer {
+    height: 20%;
+
+    .titleContainer {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+    .cardContainer {
+      width: 100%;
+      align-items: center;
+
+      flex-direction: column;
+
+      .createCard {
+        margin-bottom: 40px;
+        width: 50%;
+      }
+    }
+  }
+}
