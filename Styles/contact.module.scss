@@ -141,10 +141,7 @@
   .formContainer {
     .titleContainer {
       h1 {
-        font-size: 3rem;
-        position: absolute;
-        top: -100px;
-        transition: 0.5s;
+        display: none;
       }
     }
   }
