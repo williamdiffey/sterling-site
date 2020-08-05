@@ -1,15 +1,15 @@
-import styles from "../Styles/Portfolio.module.scss";
-import { useState, useCallback, useRef, useEffect } from "react";
-import React from "react";
-import { Fade, Slide } from "react-awesome-reveal";
+import styles from '../Styles/portfolio.module.scss'
+import { useState, useCallback, useRef, useEffect } from 'react'
+import React from 'react'
+import { Fade, Slide } from 'react-awesome-reveal'
 export default function Portfolio(props) {
-  const [brightness, setBrightness] = useState(100);
+  const [brightness, setBrightness] = useState(100)
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setBrightness(brightness - `${Math.floor(window.pageYOffset / 10)}`);
-    });
-  }, []);
+    window.addEventListener('scroll', () => {
+      setBrightness(brightness - `${Math.floor(window.pageYOffset / 10)}`)
+    })
+  }, [])
 
   return (
     <div className={styles.portfolioContainer}>
@@ -19,13 +19,13 @@ export default function Portfolio(props) {
       ></div>
       <div className={styles.cardContainer}>
         <div className={styles.titleContainer}>
-          <Slide direction="left" delay={500} triggerOnce>
+          <Slide direction='left' delay={500} triggerOnce>
             <h1>
               Portfolio<span>:</span>
             </h1>
           </Slide>
         </div>
-        <a href="https://food-van-demo-client.now.sh/signin" target="_blank">
+        <a href='https://food-van-demo-client.now.sh/signin' target='_blank'>
           <div className={styles.cardOne}>
             <div className={styles.hoverDiv}>
               <p>
@@ -41,7 +41,7 @@ export default function Portfolio(props) {
             </div>
           </div>
         </a>
-        <a href="https://splash-page-one.vercel.app/" target="_blank">
+        <a href='https://splash-page-one.vercel.app/' target='_blank'>
           <div className={styles.cardTwo}>
             <div className={styles.hoverDiv}>
               <p>
@@ -56,7 +56,7 @@ export default function Portfolio(props) {
             </div>
           </div>
         </a>
-        <a href="https://splash-page-one.vercel.app/" target="_blank">
+        <a href='https://splash-page-one.vercel.app/' target='_blank'>
           <div className={styles.cardTwo} id={styles.lastCard}>
             <div className={styles.hoverDiv}>
               <p>
@@ -73,5 +73,5 @@ export default function Portfolio(props) {
         </a>
       </div>
     </div>
-  );
+  )
 }

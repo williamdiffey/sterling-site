@@ -2,16 +2,16 @@
 // import PaletteIcon from "@material-ui/icons/Palette";
 // import ImportantDevicesIcon from "@material-ui/icons/ImportantDevices";
 // import LanguageIcon from "@material-ui/icons/Language";
-import styles from "../Styles/CreateProcess.module.scss";
-import { useState, useCallback, useRef, useEffect } from "react";
-import React from "react";
-import { Fade, Slide } from "react-awesome-reveal";
+import styles from '../Styles/createProcess.module.scss'
+import { useState, useCallback, useRef, useEffect } from 'react'
+import React from 'react'
+import { Fade, Slide } from 'react-awesome-reveal'
 
 export default function CreateProcess() {
   return (
     <div className={styles.createProcessContainer}>
       <div className={styles.titleContainer}>
-        <Slide direction="left" delay={500} triggerOnce>
+        <Slide direction='left' delay={500} triggerOnce>
           <h1>
             What We Do<span>:</span>
           </h1>
@@ -56,5 +56,5 @@ export default function CreateProcess() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,28 +1,28 @@
-import React from "react";
-import { Fade, Slide } from "react-awesome-reveal";
-import { useState, useCallback, useRef, useEffect } from "react";
-import styles from "../Styles/IndexTwo.module.scss";
+import React from 'react'
+import { Fade, Slide } from 'react-awesome-reveal'
+import { useState, useCallback, useRef, useEffect } from 'react'
+import styles from '../Styles/indexTwo.module.scss'
 
 export default function Homepage() {
-  const [brightness, setBrightness] = useState(100);
-  const [top, setTop] = useState(20);
-  const [xPos, setXPos] = useState(0);
-  const [yPos, setYPos] = useState(0);
-  const [xPosTrail, setXPosTrail] = useState(0);
-  const [yPosTrail, setYPosTrail] = useState(0);
+  const [brightness, setBrightness] = useState(100)
+  const [top, setTop] = useState(20)
+  const [xPos, setXPos] = useState(0)
+  const [yPos, setYPos] = useState(0)
+  const [xPosTrail, setXPosTrail] = useState(0)
+  const [yPosTrail, setYPosTrail] = useState(0)
 
   const handleMouseMove = (e) => {
-    const { clientX, clientY } = e;
-    setXPos(clientX);
-    setYPos(clientY);
-  };
+    const { clientX, clientY } = e
+    setXPos(clientX)
+    setYPos(clientY)
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setBrightness(brightness - `${Math.floor(window.pageYOffset / 10)}`);
-      setTop(top - `${Math.floor(window.pageYOffset / 10)}`);
-    });
-  }, []);
+    window.addEventListener('scroll', () => {
+      setBrightness(brightness - `${Math.floor(window.pageYOffset / 10)}`)
+      setTop(top - `${Math.floor(window.pageYOffset / 10)}`)
+    })
+  }, [])
 
   return (
     <div>
@@ -46,5 +46,5 @@ export default function Homepage() {
         <div className={styles.backgroundDiv}></div>
       </div>
     </div>
-  );
+  )
 }

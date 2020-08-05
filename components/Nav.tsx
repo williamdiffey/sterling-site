@@ -1,21 +1,21 @@
-import React, { useState, useContext } from "react";
-import Link from "next/link";
-import styles from "../styling/components/Nav.module.scss";
+import React, { useState, useContext } from 'react'
+import Link from 'next/link'
+import styles from '../styling/components/nav.module.scss'
 
 interface Props {}
 
 export const NavBar: React.FC<Props> = () => {
-  const [condition, setCondition] = useState(true);
+  const [condition, setCondition] = useState(true)
   return (
     <div className={styles.nav}>
       <div className={styles.toplinkcontainer}>
-        <Link href="/">
+        <Link href='/'>
           <a className={styles.toplink}>Link 1</a>
         </Link>
-        <Link href="/">
+        <Link href='/'>
           <a className={styles.toplink}>Link 2</a>
         </Link>
-        <Link href="/">
+        <Link href='/'>
           <a className={styles.toplink}>Link 3</a>
         </Link>
       </div>
@@ -33,17 +33,17 @@ export const NavBar: React.FC<Props> = () => {
         <ul className={styles.popoutlinkcontainer}>
           <li className={styles.popoutlinkcontainer}></li>
           <li className={styles.popoutlink}>
-            <Link href="/">
+            <Link href='/'>
               <a className={styles.popoutlink}> Home</a>
             </Link>
           </li>
           <li className={styles.popoutlink}>
-            <Link href="/">
+            <Link href='/'>
               <a className={styles.popoutlink}>Link 4</a>
             </Link>
           </li>
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
